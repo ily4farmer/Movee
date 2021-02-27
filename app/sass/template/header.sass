@@ -1,0 +1,41 @@
+.header
+    padding-top: 40px
+    +bg
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo
+        font-style: normal
+        font-weight: 600
+        font-size: 30px
+    &__phone
+        font-weight: 600
+        font-size: 24px
+        +text
+        text-decoration: none
+
+    &__phone:after
+        margin-top: -3px 
+        background-color: #333333
+        display: block
+        content: ""
+        height: 2px
+        width: 100%
+        transition: width 1s 
+    // &__phone:hover:after 
+    //     width: 0%
+
+
+//nav
+.nav
+    font-weight: 500;
+    font-size: 18px;
+    &__menu
+        list-style-type: none
+        display: flex
+    &__link
+        display: block
+        margin-right: 48px
+    &__link:last-child
+        margin-right: 0

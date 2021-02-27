@@ -1,0 +1,22 @@
+
+{
+    "presets": [[
+        "@babel/preset-env",
+        {
+            "targets": {
+                "ie": "11"
+            },
+            "useBuiltIns": "entry"
+        }
+    ]
+],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        ["@babel/plugin-transform-async-to-generator", {
+            "module": "bluebird",
+            "method": "coroutine"
+          }],
+        "@babel/transform-arrow-functions",
+        "@babel/plugin-transform-modules-commonjs"
+    ]
+}
