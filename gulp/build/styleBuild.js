@@ -3,14 +3,12 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     clean = require('gulp-clean-css'),
     shorthand = require('gulp-shorthand'),
-    sourcemaps = require('gulp-sourcemaps'),//Не используется, выскакивает ошибка
     rename = require('gulp-rename'),
     webpcss = require('gulp-webpcss');
 
 
-module.exports = function styles() {
+module.exports = function styleBuild() {
     return gulp.src('app/sass/style.sass')
-        .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(shorthand())
         // .pipe(webpcss())
@@ -21,8 +19,6 @@ module.exports = function styles() {
                 grid: true
             }
         ))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist/css'))
         .pipe(clean(
             {
                 debug: true,

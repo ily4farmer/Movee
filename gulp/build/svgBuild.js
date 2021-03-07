@@ -1,14 +1,13 @@
 const gulp = require('gulp'),
       svgSprite = require('gulp-svg-sprite');
 
-module.exports = function svg() {
+module.exports = function svgBuild() {
     return gulp.src('app/**/*.svg')
         .pipe(svgSprite(
             {
                 mode: {
                     stack: { 
-                      sprite: "../icons.svg",
-                      example: true
+                      sprite: "../icons.svg"
                     }
                 }
             }

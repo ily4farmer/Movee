@@ -1,2 +1,57 @@
 .hero
+    // padding-top: 63px
+    padding-bottom: 70px
+    +bg
     display: block
+    &__inner
+        display: flex
+    &-text
+        width: 40%
+        &__title
+            margin-top: 63px
+            font-weight: bold
+            font-size: 70px
+            line-height: 70px
+        &__subtitle
+            margin-top: 20px
+            font-weight: 600
+            font-size: 30px
+        &__btn
+            margin-top: 50px
+            margin-bottom: 76px
+            display: block
+            +btn
+            width: 304px
+            text-decoration: none
+            padding: 15px 0 15px 0
+            font-weight: 600
+            font-size: 24px
+            text-align: center
+            color: #F2F2F2
+    &-list
+        margin-top: 77px
+    &__img
+        display: flex
+        position: relative
+        width: 60%
+        // justify-content: center
+        &-one 
+            position: absolute
+            top: -50px
+            left: 100px
+        &-two 
+            position: absolute
+            top: 0
+            width: 499px
+            height: 300px
+
+    &-list
+        display: flex
+        &__item
+            display: flex
+        &__text
+            margin-left: 10px
+            line-height: 21px
+        &__img
+            max-width: 50px
+            max-height: 40px
